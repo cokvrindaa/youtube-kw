@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .kotak {
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      transition: height 0.3s; /* Efek perubahan animasi */
+      cursor: pointer; /* Menunjukkan kursor saat dapat diklik */
+    }
+
+    .kotak.panjang {
+      height: 200px; /* Tinggi elemen saat diklik */
+    }
+  </style>
+  <title>Element Memperpanjang Ke Bawah</title>
+</head>
+<body>
+  <div class="kotak" onclick="toggleLength()"></div>
+
+  <script>
+    function toggleLength() {
+      var kotak = document.querySelector('.kotak');
+      kotak.classList.toggle('panjang');
+    }
+  </script>
+</body>
+</html>
